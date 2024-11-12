@@ -1,0 +1,204 @@
+<!DOCTYPE html> <!-- Specifies the document type as HTML5 -->
+<html lang="en"> <!-- Defines the language of the page as English -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on mobile devices -->
+    <title>Bunny Friends</title> <!-- Title of the page that appears in the browser tab -->
+    <!-- Link to FontAwesome icons (for icons like home, user, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Link to external CSS file (style.css) -->
+    <link rel="stylesheet" href="zaicheta_priqteli.css?v=2">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="/kartinki/favicon.ico">
+
+</head>
+
+<body>
+    <header class="header">
+        <!-- Link to home page with a logo and brand name -->
+        <a href="/">
+            <img src="kartinki/logo_3big.png" alt="Brand logo"> <!-- Logo image -->
+            <span class="brand-logo-name">
+                Bunny Friends <!-- Brand name next to the logo -->
+            </span>
+        </a>
+        <!-- Navigation bar (links for different sections of the website) -->
+        <nav class="navbar">
+            <ul class="navbar-lists" id="myTopnav">
+                <!-- Home Link -->
+                <li>
+                    <i class="fas fa-home"></i> <!-- Home icon -->
+                    <a class="navbar-link home-link" href="#">Home</a>
+                </li>
+                <!-- About Us Link -->
+                <li>
+                    <i class="fas fa-user"></i> <!-- About Us icon -->
+                    <a class="navbar-link about-link" href="#about-us-section">About Us</a>
+                </li>
+
+                <li>
+                    <i class="fas fa-bullhorn"></i> <!-- Notice icon -->
+                    <a class="navbar-link service-link" href="#notice-bord-section">Notice Board</a>
+                </li>
+                <!-- Registration Us Link -->
+                <li>
+                    <i class="fas fa-solid fa-address-card"></i>
+                    <a class="navbar-link reg-link" id="reg-link" href="#reg-login-form">Registration</a>
+                </li>
+
+                <!-- Login Link -->
+                <li>
+                    <i class="fas fa-regular fa-user"></i>
+                    <a class="navbar-link login-link" id="login-link" href="#reg-login-form">Login</a>
+                </li>
+                
+            </ul>
+            <!-- Hamburger menu icon (appears on mobile devices) -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section for the school image with a welcoming heading -->
+        <div class="bckg-img-container">
+            <div class="img-container">
+                <img src="kartinki/background_long.png" alt="bckg img" class="bckg-img">
+                <h1 class="img-title">Welcome to Bunny Friends</h1>
+            </div>
+        </div>
+
+        <!-- Vision section that describes the school's vision -->
+        <section id="vision">
+            <h2 class="vision-heading">Our Mission</h2>
+            <p>
+                Our goal is to be able to find friends for every bunny out there. On our platform they can share knowleadge, expiriences and fears. And their parents can communicate about their children and everything about them in a judge-free zone!
+            </p>
+        </section>
+
+        <!-- Notice Board section where announcements are displayed -->
+        <div class="main-notice-section" id="notice-bord-section">
+            <div class="notice-container">
+                <div class="notice-bord">
+                    <h2 class="notice-bord-heading">Notice Board</h2>
+                    <div>
+                        <ul> 
+                            <li>
+                                <i>March 15, 2025:</i> Bunny tricks - workshop with Tatyana Tatyanova Tatyanova <span class="new-text">New</span>
+                            </li>
+
+                            <li>
+                                <i>Januay 4, 2025:</i> Bunnies on a walk - Borisova garden <span class="new-text">New</span>
+                            </li>
+                           
+                            <li>
+                                <i>December 1, 2024:</i> Bunny yoga!!! <span class="new-text">New</span>
+                            </li>
+                           
+                            <li>
+                                <i>October 2, 2024:</i> How to hold our bunny correctly <span class="new-text">Old</span>
+                            </li>
+
+                            <li>
+                                <i>September 23, 2024:</i> Bunny fashion show!!!!! <span class="new-text">Old</span>
+                            </li>
+
+                            <li>
+                                <i>July 17 - 22, 2024:</i> Bunnies at the beach - trip!!!!! <span class="new-text">Old</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Upcoming events section -->
+                <div class="event-card">
+                    <h2 class="event-heading">Upcoming Events</h2>
+                    <div class="event-details">
+                        <!-- Individual event cards -->
+                        <div class="event">
+                            <h3>Longest jump championship</h3>
+                            <p>Date: December 15, 2024</p>
+                            <p>Time: 9:00 AM - 12:00 PM</p>
+                            <p>Location: South park</p>
+                            <p><strong>Description:</strong> Bunny competition.</p>
+                        </div>
+                        <div class="event">
+                            <h3>Home-made munchies workshop</h3>
+                            <p>Date: November 29, 2024</p>
+                            <p>Time: 2:00 PM - 5:00 PM</p>
+                            <p>Location: Online</p>
+                            <p><strong>Description:</strong> How to make your bunny snacks at home.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us section that provides more details about the school -->
+        <section id="about-us-section">
+            <div class="about-us-container">
+                <h2 class="aboutus-heading">About Us</h2>
+                <p>
+                    <strong class="subheading">Company Profile and Brand:</strong> Bunny Friends is a platform where you can create and manage your pet bunny's account. You can share photos and funny stories with all the other bun-parents out there. That way we can build one strong and cute bun-communitty. And whenever or wherever someone doesn't know what is happening with their bunny, how to help them or just wants to entertain them(selves) - there is the Bunny Friends platform for that!
+                </p>
+            </div>
+        </section>
+
+        <!-- Registration/login -->
+        <section id="reg-login-form">
+            <div class="container" id="reg-container">
+                <h2 class="reg-form-heading">Registration</h2>
+                <form id="regForm">
+                    <!-- Form fields for name, email, phone, and message -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" name="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">password</label>
+                        <input type="password" id="regPassword" name="regPassword" required>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        
+            <div class="container" id="login-container">
+                <h2 class="log-form-heading">Login</h2>
+                <form id="logForm">
+                    <!-- Form fields for name, email, phone, and message -->
+                    
+                    <div class="form-group">
+                        <label for="logEmail">Email</label>
+                        <input type="email" id="logEmail" name="logEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="logPassword">password</label>
+                        <input type="password" id="logPassword" name="logPassword" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with copyright information -->
+    <footer>
+        <p>&copy; </p>
+    </footer>
+
+    <!-- Link to external JavaScript file (index.js) for interactivity -->
+    <script src="zaicheta_priqteli.js"></script>
+
+</body>
+</html>

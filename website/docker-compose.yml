@@ -1,0 +1,36 @@
+services:
+  db:
+    image: mysql:8
+    restart: unless-stopped
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: auth_db
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - backend
+
+  backend:
+    build: 
+      context: .
+      dockerfile: ./backend/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=mysql  # This should match the name of the db service
+      - DB_USER=root
+      - DB_PASSWORD=rootpassword
+      - DB_NAME=auth_db
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  db-data:
